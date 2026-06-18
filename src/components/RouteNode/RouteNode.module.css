@@ -1,0 +1,41 @@
+/* Styles for a single asset node in the route diagram */
+.node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 64px;
+}
+
+.bubble {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--rv-accent-subtle);
+  border: 2px solid var(--rv-node-border);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--rv-accent);
+  letter-spacing: 0.02em;
+  font-family: var(--rv-font);
+}
+
+.code {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--rv-text-primary);
+  font-family: var(--rv-font);
+}
+
+.issuer {
+  font-size: 10px;
+  color: var(--rv-text-secondary);
+  font-family: var(--rv-font);
+  max-width: 72px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,40 @@
+/* Design tokens for light and dark themes — all component styles consume these */
+:root,
+[data-rv-theme="light"] {
+  --rv-bg: #ffffff;
+  --rv-surface: #f4f6f9;
+  --rv-border: #dde1e7;
+  --rv-text-primary: #111827;
+  --rv-text-secondary: #6b7280;
+  --rv-accent: #4f46e5;
+  --rv-accent-subtle: #eef2ff;
+  --rv-warning: #d97706;
+  --rv-warning-bg: #fffbeb;
+  --rv-danger: #dc2626;
+  --rv-danger-bg: #fef2f2;
+  --rv-success: #059669;
+  --rv-arrow: #9ca3af;
+  --rv-node-border: #c7d2fe;
+  --rv-font: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --rv-radius: 8px;
+  --rv-radius-sm: 4px;
+  --rv-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+[data-rv-theme="dark"] {
+  --rv-bg: #0f172a;
+  --rv-surface: #1e293b;
+  --rv-border: #334155;
+  --rv-text-primary: #f1f5f9;
+  --rv-text-secondary: #94a3b8;
+  --rv-accent: #818cf8;
+  --rv-accent-subtle: #1e1b4b;
+  --rv-warning: #fbbf24;
+  --rv-warning-bg: #1c1500;
+  --rv-danger: #f87171;
+  --rv-danger-bg: #1c0000;
+  --rv-success: #34d399;
+  --rv-arrow: #475569;
+  --rv-node-border: #3730a3;
+  --rv-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}

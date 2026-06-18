@@ -1,0 +1,23 @@
+/* Color-coded slippage percentage badge */
+.badge {
+  font-size: 10px;
+  font-weight: 600;
+  font-family: var(--rv-font);
+  padding: 2px 6px;
+  border-radius: var(--rv-radius-sm);
+}
+
+.normal {
+  color: var(--rv-success);
+  background: transparent;
+}
+
+.warning {
+  color: var(--rv-warning);
+  background: var(--rv-warning-bg);
+}
+
+.danger {
+  color: var(--rv-danger);
+  background: var(--rv-danger-bg);
+}

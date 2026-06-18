@@ -1,0 +1,36 @@
+/* Wrapper styles for the top-level RouteVisualizer component */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: var(--rv-bg);
+  border: 1px solid var(--rv-border);
+  border-radius: var(--rv-radius);
+  box-shadow: var(--rv-shadow);
+  overflow: hidden;
+  padding: 20px;
+  font-family: var(--rv-font);
+  color: var(--rv-text-primary);
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  margin-top: 16px;
+  border-top: 1px solid var(--rv-border);
+  font-size: 13px;
+  color: var(--rv-text-secondary);
+}
+
+.summaryLabel {
+  font-weight: 500;
+}
+
+.summaryValue {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+

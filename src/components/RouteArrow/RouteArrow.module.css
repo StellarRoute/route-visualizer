@@ -1,0 +1,86 @@
+/* Styles for the hop arrow connecting two asset nodes */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 80px;
+  flex: 1;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.shaft {
+  flex: 1;
+  height: 2px;
+  background: var(--rv-arrow);
+}
+
+.arrowHead {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 8px solid var(--rv-arrow);
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.poolType {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--rv-accent);
+  font-family: var(--rv-font);
+  background: var(--rv-accent-subtle);
+  padding: 1px 6px;
+  border-radius: var(--rv-radius-sm);
+}
+
+.poolId {
+  font-size: 9px;
+  color: var(--rv-text-secondary);
+  font-family: monospace;
+}
+
+/* Responsive: vertical layout */
+@media (max-width: 480px) {
+  .wrapper {
+    flex-direction: row;
+    min-width: unset;
+    min-height: 60px;
+    width: auto;
+  }
+
+  .line {
+    flex-direction: column;
+    width: 2px;
+    height: 100%;
+  }
+
+  .shaft {
+    flex: 1;
+    width: 2px;
+    height: unset;
+  }
+
+  .arrowHead {
+    border-top: 8px solid var(--rv-arrow);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 0;
+    border-left-color: transparent;
+  }
+}

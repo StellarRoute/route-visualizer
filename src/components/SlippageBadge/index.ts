@@ -1,0 +1,1 @@
+export { SlippageBadge } from "./SlippageBadge";
