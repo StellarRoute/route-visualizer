@@ -2,13 +2,14 @@
 import type { StellarAsset } from "../types";
 
 export function formatAsset(asset: StellarAsset): string {
-  if (!asset.issuer) return "XLM";
+  if (asset.code === "XLM" && !asset.issuer) return "XLM";
   return asset.code;
 }
 
 export function formatIssuer(asset: StellarAsset): string {
   if (!asset.issuer) return "native";
   const { issuer } = asset;
+  if (issuer.length <= 12) return issuer;
   return `${issuer.slice(0, 4)}…${issuer.slice(-4)}`;
 }
 
