@@ -11,6 +11,12 @@
   padding: 20px;
   font-family: var(--rv-font);
   color: var(--rv-text-primary);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.containerUpdated {
+  border-color: var(--rv-accent);
+  box-shadow: 0 0 0 2px var(--rv-accent-subtle);
 }
 
 .summary {

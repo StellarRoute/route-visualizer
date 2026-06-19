@@ -25,6 +25,20 @@ export function RouteVisualizer({
   style,
 }: RouteVisualizerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const routeKeyRef = useRef<string>("");
+
+  useEffect(() => {
+    const hopKey = route.hops.map((h) => h.poolId).join("|");
+    if (routeKeyRef.current && routeKeyRef.current !== hopKey && containerRef.current) {
+      containerRef.current.classList.add(styles.containerUpdated);
+      const timer = window.setTimeout(() => {
+        containerRef.current?.classList.remove(styles.containerUpdated);
+      }, 400);
+      routeKeyRef.current = hopKey;
+      return () => window.clearTimeout(timer);
+    }
+    routeKeyRef.current = hopKey;
+  }, [route.hops]);
 
   useEffect(() => {
     const el = containerRef.current;
