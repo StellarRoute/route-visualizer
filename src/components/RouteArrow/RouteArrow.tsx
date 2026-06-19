@@ -11,12 +11,13 @@ interface RouteArrowProps {
 
 export function RouteArrow({ hop, showPoolIds, children }: RouteArrowProps) {
   const poolLabel = hop.poolType === "amm" ? "AMM" : "Order Book";
+  const poolTypeClass = hop.poolType === "amm" ? styles.poolTypeAmm : styles.poolTypeOrderbook;
   const ariaLabel = `Route via ${poolLabel}${showPoolIds ? ` pool ${hop.poolId}` : ""}`;
 
   return (
     <div className={styles.wrapper} role="img" aria-label={ariaLabel}>
       <div className={styles.label}>
-        <span className={styles.poolType}>{poolLabel}</span>
+        <span className={`${styles.poolType} ${poolTypeClass}`}>{poolLabel}</span>
         {showPoolIds && <span className={styles.poolId}>{formatPoolId(hop.poolId)}</span>}
         {children}
       </div>

@@ -37,6 +37,14 @@
   gap: 2px;
 }
 
+.poolTypeAmm {
+  color: var(--rv-amm-color);
+}
+
+.poolTypeOrderbook {
+  color: var(--rv-orderbook-color);
+}
+
 .poolType {
   font-size: 10px;
   font-weight: 600;

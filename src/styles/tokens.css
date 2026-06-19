@@ -14,6 +14,8 @@
   --rv-danger-bg: #fef2f2;
   --rv-success: #059669;
   --rv-arrow: #9ca3af;
+  --rv-amm-color: #4f46e5;
+  --rv-orderbook-color: #059669;
   --rv-node-border: #c7d2fe;
   --rv-font: system-ui, -apple-system, "Segoe UI", sans-serif;
   --rv-radius: 8px;
@@ -35,6 +37,8 @@
   --rv-danger-bg: #1c0000;
   --rv-success: #34d399;
   --rv-arrow: #475569;
+  --rv-amm-color: #818cf8;
+  --rv-orderbook-color: #34d399;
   --rv-node-border: #3730a3;
   --rv-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
