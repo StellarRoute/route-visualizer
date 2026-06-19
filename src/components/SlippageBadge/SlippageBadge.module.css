@@ -8,16 +8,16 @@
 }
 
 .normal {
-  color: var(--rv-success);
+  color: var(--rv-slippage-low, var(--rv-success));
   background: transparent;
 }
 
 .warning {
-  color: var(--rv-warning);
+  color: var(--rv-slippage-medium, var(--rv-warning));
   background: var(--rv-warning-bg);
 }
 
 .danger {
-  color: var(--rv-danger);
+  color: var(--rv-slippage-high, var(--rv-danger));
   background: var(--rv-danger-bg);
 }
