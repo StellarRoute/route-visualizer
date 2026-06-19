@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import type { RouteVisualizerProps, Theme } from "../types";
 import { RouteDiagram } from "./RouteDiagram";
+import { RouteHeader } from "../RouteHeader";
 import { SlippageBadge } from "./SlippageBadge";
 import "../styles/tokens.css";
 import styles from "./RouteVisualizer.module.css";
@@ -18,6 +19,7 @@ export function RouteVisualizer({
   theme = "auto",
   showSlippage = true,
   showPoolIds = true,
+  showAmounts = true,
   maxHopsShown,
   className,
   style,
@@ -48,6 +50,7 @@ export function RouteVisualizer({
       style={style}
       data-rv-theme={theme === "auto" ? undefined : theme}
     >
+      {showAmounts && <RouteHeader route={route} />}
       <RouteDiagram
         route={route}
         showSlippage={showSlippage}

@@ -32,6 +32,7 @@ export interface RouteVisualizerProps {
   theme?: Theme;
   showSlippage?: boolean;
   showPoolIds?: boolean;
+  showAmounts?: boolean;
   maxHopsShown?: number;
   className?: string;
   style?: CSSProperties;
