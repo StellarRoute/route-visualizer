@@ -13,7 +13,7 @@ export function SlippageBadge({ pct }: SlippageBadgeProps) {
   return (
     <span
       className={`${styles.badge} ${severityClass}`}
-      aria-label={`Slippage: ${formatSlippage(pct)}`}
+      aria-label={`Slippage: ${formatSlippage(pct)} (${severity})`}
     >
       {formatSlippage(pct)}
     </span>
