@@ -15,6 +15,15 @@ interface RouteDiagramProps {
 
 export function RouteDiagram({ route, showSlippage, showPoolIds, maxHopsShown }: RouteDiagramProps) {
   const { hops, totalSlippagePct } = route;
+
+  if (hops.length === 0) {
+    return (
+      <div className={styles.empty} role="status">
+        No route hops to display
+      </div>
+    );
+  }
+
   const truncated = maxHopsShown !== undefined && hops.length > maxHopsShown;
   const visibleHops = truncated ? hops.slice(0, maxHopsShown) : hops;
   const hiddenCount = hops.length - visibleHops.length;
