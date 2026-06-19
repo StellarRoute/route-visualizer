@@ -15,6 +15,9 @@ describe("formatAsset", () => {
 
 describe("formatIssuer", () => {
   it("returns native for XLM", () => expect(formatIssuer(xlm)).toBe("native"));
+  it("returns full issuer when short", () => {
+    expect(formatIssuer({ code: "USDC", issuer: "GABC1234" })).toBe("GABC1234");
+  });
   it("truncates long issuer", () => expect(formatIssuer(usdc)).toBe("GA5Z…KZVN"));
   it("truncates to first 4 + last 4 chars", () => {
     const result = formatIssuer(usdc);
