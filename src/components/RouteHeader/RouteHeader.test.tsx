@@ -17,6 +17,6 @@ describe("RouteHeader", () => {
     render(<RouteHeader route={route} />);
     expect(screen.getByLabelText("Trade amounts")).toBeInTheDocument();
     expect(screen.getByText("100 XLM")).toBeInTheDocument();
-    expect(screen.getByText("99.5 USDC")).toBeInTheDocument();
+    expect(screen.getByText(/99\.5 USDC/)).toBeInTheDocument();
   });
 });

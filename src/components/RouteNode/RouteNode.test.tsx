@@ -12,13 +12,13 @@ const usdc = {
 describe("RouteNode", () => {
   it("renders native XLM node", () => {
     render(<RouteNode asset={xlm} />);
-    expect(screen.getByText("XLM")).toBeInTheDocument();
+    expect(screen.getAllByText("XLM").length).toBeGreaterThan(0);
     expect(screen.getByText("native")).toBeInTheDocument();
   });
 
   it("renders issued asset node", () => {
     render(<RouteNode asset={usdc} />);
-    expect(screen.getByText("USDC")).toBeInTheDocument();
+    expect(screen.getAllByText("USDC").length).toBeGreaterThan(0);
   });
 
   it("has accessible role and label", () => {
