@@ -13,4 +13,14 @@ describe("SlippageBadge", () => {
     render(<SlippageBadge pct={1.5} />);
     expect(screen.getByLabelText("Slippage: 1.50%")).toBeInTheDocument();
   });
+
+  it("applies warning class at 1% threshold", () => {
+    const { container } = render(<SlippageBadge pct={1.0} />);
+    expect(container.firstChild).toHaveClass("warning");
+  });
+
+  it("applies danger class at 3% threshold", () => {
+    const { container } = render(<SlippageBadge pct={3.5} />);
+    expect(container.firstChild).toHaveClass("danger");
+  });
 });
