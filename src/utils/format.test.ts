@@ -1,6 +1,6 @@
 // Unit tests for all formatting utility functions
 import { describe, it, expect } from "vitest";
-import { formatAsset, formatIssuer, formatPoolId, formatSlippage, slippageSeverity } from "./format";
+import { formatAsset, formatIssuer, formatPoolId, formatSlippage, formatAmount, slippageSeverity } from "./format";
 
 const xlm = { code: "XLM" };
 const usdc = {
@@ -35,6 +35,15 @@ describe("formatSlippage", () => {
     expect(formatSlippage(0.5)).toBe("0.50%");
     expect(formatSlippage(1.234)).toBe("1.23%");
     expect(formatSlippage(0)).toBe("0.00%");
+  });
+});
+
+describe("formatAmount", () => {
+  it("formats stroops into asset units", () => {
+    expect(formatAmount("10000000", xlm)).toBe("1 XLM");
+  });
+  it("handles zero", () => {
+    expect(formatAmount("0", usdc)).toBe("0 USDC");
   });
 });
 
