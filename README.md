@@ -4,6 +4,7 @@ An embeddable React component that renders a visual "how your trade will be rout
 
 [![CI](https://github.com/StellarRoute/route-visualizer/actions/workflows/ci.yml/badge.svg)](https://github.com/StellarRoute/route-visualizer/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/@stellarroute/route-visualizer.svg)](https://www.npmjs.com/package/@stellarroute/route-visualizer)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/@stellarroute/route-visualizer)](https://bundlephobia.com/package/@stellarroute/route-visualizer)
 
 ## Installation
 
@@ -84,6 +85,16 @@ interface StellarAsset {
   issuer?: string; // undefined for native XLM
 }
 ```
+
+## Slippage severity
+
+Per-hop and total slippage badges use `slippageSeverity()` in `src/utils/format.ts`:
+
+| Range | Color | Meaning |
+|-------|-------|---------|
+| &lt; 1% | Green (`normal`) | Low impact |
+| ≥ 1% and &lt; 3% | Amber (`warning`) | Elevated impact — double-check size |
+| ≥ 3% | Red (`danger`) | High impact |
 
 ## Theming / Customization
 
